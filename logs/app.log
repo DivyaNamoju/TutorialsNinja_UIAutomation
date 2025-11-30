@@ -58,3 +58,7 @@
 2025-11-28 16:03:43 INFO  testCases.LoginTest - Validate data driven user login
 2025-11-28 16:03:45 INFO  testCases.LoginTest - User navigated to login page
 2025-11-28 16:03:50 INFO  testCases.LoginTest - user clicked on Login button
+2025-11-30 17:45:14 INFO  testCases.HomePageTest - Test to validate myAccount link
+2025-11-30 17:46:49 INFO  testCases.LoginTest - Validate user login
+2025-11-30 17:46:55 INFO  testCases.LoginTest - User navigated to login page
+2025-11-30 17:46:59 INFO  testCases.LoginTest - user clicked on Login button

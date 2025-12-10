@@ -5,8 +5,8 @@
     <test name="Tutorials Ninja">
         <classes>
             <class name="testCases.HomePageTest"/>
-            <class name="testCases.RegisterPageTest"/>
-            <class name="testCases.LoginTest"/>
+            <!----><class name="testCases.RegisterPageTest"/>
+            <!----><class name="testCases.LoginTest"/>
         </classes>
     </test>
 </suite>

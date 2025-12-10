@@ -19,7 +19,7 @@ public class HomePageTest extends WebDriverBase {
         log.info("Test to validate myAccount link");
         homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
-        System.out.println(driver.getTitle());
+        System.out.println(getDriver().getTitle());
     }
     @Test(priority = 1)
     public void testRegisterLink()
@@ -28,7 +28,7 @@ public class HomePageTest extends WebDriverBase {
         homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
         homePage.clickOnRegister();
-        assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/register", driver.getCurrentUrl());
+        assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/register", getDriver().getCurrentUrl());
     }
     @Test(priority = 2)
     public void testLoginLink()
@@ -37,6 +37,6 @@ public class HomePageTest extends WebDriverBase {
         homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
         homePage.clickOnLogin();
-        assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/login", driver.getCurrentUrl());
+        assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/login", getDriver().getCurrentUrl());
     }
 }

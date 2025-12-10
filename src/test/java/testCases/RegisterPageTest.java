@@ -1,6 +1,7 @@
 package testCases;
 
 import baseClass.WebDriverBase;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.RegisterPage;
@@ -13,11 +14,12 @@ public class RegisterPageTest extends WebDriverBase {
 //    Password : Feg4%5
     RegisterPage registerPage ;
     HomePage homePage;
+    // WebDriver driver = getDriver();
     @Test
     public void testRegisterUser() throws InterruptedException {
         log.info("Test to validate the user registration");
-        homePage = new HomePage(driver);
-        registerPage = new RegisterPage(driver);
+        homePage = new HomePage(getDriver());
+        registerPage = new RegisterPage(getDriver());
         homePage.clickOnMyAccountLink();
         homePage.clickOnRegister();
         log.info("User navigated to Register page");

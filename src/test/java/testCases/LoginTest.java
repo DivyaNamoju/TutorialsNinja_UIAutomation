@@ -18,8 +18,8 @@ public class LoginTest extends WebDriverBase {
     public void testUserLogin()
    {
        log.info("Validate user login");
-       homePage = new HomePage(driver);
-       loginPage = new LoginPage(driver);
+       homePage = new HomePage(getDriver());
+       loginPage = new LoginPage(getDriver());
        homePage.clickOnMyAccountLink();
        homePage.clickOnLogin();
        log.info("User navigated to login page");
@@ -35,8 +35,8 @@ public class LoginTest extends WebDriverBase {
    @Test(dataProvider = "UserAccounts", dataProviderClass = TestDataProvider.class)
    public void testDataDrivenUserLogin(String uname, String password) throws InterruptedException {
        log.info("Validate data driven user login");
-       homePage = new HomePage(driver);
-       loginPage = new LoginPage(driver);
+       homePage = new HomePage(getDriver());
+       loginPage = new LoginPage(getDriver());
        homePage.clickOnMyAccountLink();
        homePage.clickOnLogin();
        log.info("User navigated to login page");
@@ -47,7 +47,7 @@ public class LoginTest extends WebDriverBase {
        log.info("user clicked on Login button");
        assertEquals("User is not successfully logged in",
                "https://tutorialsninja.com/demo/index.php?route=account/account",
-               driver.getCurrentUrl());
+               getDriver().getCurrentUrl());
    }
 
 }

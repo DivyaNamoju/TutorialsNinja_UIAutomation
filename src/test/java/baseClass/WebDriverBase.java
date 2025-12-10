@@ -22,6 +22,7 @@ public class WebDriverBase
 {
     public WebDriver driver;
     public Logger log;
+    private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
     @BeforeMethod
     public void setUp()
     {
@@ -35,7 +36,7 @@ public class WebDriverBase
             desiredCapabilities.setBrowserName(BROWSER_NAME);
 
             try {
-                driver = new RemoteWebDriver(new URL("http://192.168.1.39:4444/wd/hub"), desiredCapabilities);
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
             } catch (MalformedURLException e) {
                 System.out.println(e.getLocalizedMessage());
             }
@@ -54,21 +55,20 @@ public class WebDriverBase
                 default -> new ChromeDriver();
             };
         }
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.manage().window().maximize();
-        driver.get("https://tutorialsninja.com/demo/");
-        // return driver;
-        // threadLocalDriver.set(driver);
+        threadLocal.set(driver);
+        getDriver().manage().deleteAllCookies();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        getDriver().manage().window().maximize();
+        getDriver().get("https://tutorialsninja.com/demo/");
     }
     @AfterMethod
     public void quitBrowser()
     {
-        driver.quit();
+        getDriver().quit();
     }
 
     public WebDriver getDriver()
     {
-        return driver;
+        return threadLocal.get();
     }
 }

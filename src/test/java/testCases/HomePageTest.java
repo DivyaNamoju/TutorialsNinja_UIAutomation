@@ -12,14 +12,12 @@ import static org.testng.AssertJUnit.assertEquals;
 public class HomePageTest extends WebDriverBase {
 
     HomePage homePage;
-    LoginPage loginPage;
-    RegisterPage registerPage;
 
     @Test
     public void testMyAccountLink()
     {
         log.info("Test to validate myAccount link");
-        homePage = new HomePage(driver);
+        homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
         System.out.println(driver.getTitle());
     }
@@ -27,7 +25,7 @@ public class HomePageTest extends WebDriverBase {
     public void testRegisterLink()
     {
         log.info("Test to validate Register link");
-        homePage = new HomePage(driver);
+        homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
         homePage.clickOnRegister();
         assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/register", driver.getCurrentUrl());
@@ -36,7 +34,7 @@ public class HomePageTest extends WebDriverBase {
     public void testLoginLink()
     {
         log.info("Test to validate Login link");
-        homePage = new HomePage(driver);
+        homePage = new HomePage(getDriver());
         homePage.clickOnMyAccountLink();
         homePage.clickOnLogin();
         assertEquals("User is not on Register URL", "https://tutorialsninja.com/demo/index.php?route=account/login", driver.getCurrentUrl());

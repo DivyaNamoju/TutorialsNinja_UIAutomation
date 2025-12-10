@@ -134,3 +134,14 @@
 2025-12-10 21:45:42 INFO  testCases.RegisterPageTest - User navigated to Register page
 2025-12-10 21:45:45 INFO  testCases.LoginTest - user clicked on Login button
 2025-12-10 21:45:50 INFO  testCases.RegisterPageTest - User clicked on Continue button
+2025-12-10 22:00:35 INFO  testCases.LoginTest - Validate data driven user login
+2025-12-10 22:00:36 INFO  testCases.RegisterPageTest - Test to validate the user registration
+2025-12-10 22:00:39 INFO  testCases.LoginTest - User navigated to login page
+2025-12-10 22:00:41 INFO  testCases.RegisterPageTest - User navigated to Register page
+2025-12-10 22:00:49 INFO  testCases.LoginTest - user clicked on Login button
+2025-12-10 22:01:28 INFO  testCases.LoginTest - Validate user login
+2025-12-10 22:01:28 INFO  testCases.HomePageTest - Test to validate myAccount link
+2025-12-10 22:01:29 INFO  testCases.HomePageTest - Test to validate Register link
+2025-12-10 22:01:36 INFO  testCases.LoginTest - User navigated to login page
+2025-12-10 22:01:41 INFO  testCases.LoginTest - user clicked on Login button
+2025-12-10 22:01:42 INFO  testCases.RegisterPageTest - User clicked on Continue button
